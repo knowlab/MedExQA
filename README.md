@@ -52,9 +52,10 @@ The fields are here explained as follows in the order of columns:
 <a name="data-usage"></a>
 
 <h3 id="install"> 📝 installation </h3>  
-```shell  
+```  
 >> git clone https://github.com/knowlab/MedExQA  
 ```
+
 
 
 
