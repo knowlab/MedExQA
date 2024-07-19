@@ -16,6 +16,7 @@
 - [Dataset Structure](#dataset-structure)
 - [Dataset Fields](#data-fields)
 - [Dataset Usage](#data-usage)
+- [Leaderboard](#leaderboard)
 - [Citation Information](#citation-information)
 
 ##  Benchmark Summary
@@ -52,12 +53,12 @@ The fields are here explained as follows in the order of columns:
 <a name="data-usage"></a>
 
 <h3 id="install"> 📝 installation </h3>  
-```  
->> git clone https://github.com/knowlab/MedExQA  
+
+Follow the steps to configure the environment to use the code.
+
+```shell  
+git clone https://github.com/knowlab/MedExQA  
 ```
-
-
-
 
 ## Citation
 <a name="citation-information"></a>
