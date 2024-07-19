@@ -5,6 +5,7 @@ import torch
 import pandas as pd
 from tqdm import tqdm
 from thefuzz import process
+import transformers
 from transformers.trainer_utils import set_seed
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation import GenerationConfig
@@ -13,23 +14,17 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 def load_models_tokenizer(args):
     tokenizer = AutoTokenizer.from_pretrained(
-        args.checkpoint_path,
-        trust_remote_code=True
+        args.checkpoint_path
     )
-    tokenizer.pad_token_id = tokenizer.eos_token_id
-    model = AutoModelForCausalLM.from_pretrained(
-        args.checkpoint_path,
-        pad_token_id=tokenizer.pad_token_id,
-        device_map="auto",
-        trust_remote_code=True
-    ).eval()
-    model.generation_config = GenerationConfig.from_pretrained(
-        args.checkpoint_path,
-        trust_remote_code=True
-    )
-    model.generation_config.do_sample = False  # use greedy decoding
-    model.generation_config.repetition_penalty = 1.0  # disable repetition penalty
-    return model, tokenizer
+
+    pipeline = transformers.pipeline(
+    "text-generation",
+    model=args.checkpoint_path,
+    torch_dtype=torch.bfloat16,
+    device_map="auto",
+)
+    # pipeline.model.config.pad_token_id = pipeline.model.config.eos_token_id
+    return pipeline, tokenizer
 
 
 def format_example(line):
@@ -116,21 +111,20 @@ def eval_subject(
 
     for _, row in tqdm(test_df.iterrows(), total=len(test_df)):
         question = format_example(row)
-        inputs = tokenizer(question, return_tensors="pt", return_attention_mask=False).to(device)
-
-        #여기를 바꿔야함
-        outputs = model.generate(**inputs, 
-                                 do_sample=False,
-                                 temperature=0.0, 
-                                 top_p=None,
-                                 num_beams=1,
-                                 no_repeat_ngram_size=3,
-                                 eos_token_id=tokenizer.eos_token_id,  # End of sequence token
-                                 pad_token_id=tokenizer.eos_token_id,  # Pad token
-                                 max_new_tokens=300,
-                                )               
         
-        response = tokenizer.batch_decode(outputs)[0]
+        outputs = model(
+             question,
+             do_sample=False,
+             temperature=0.0, 
+             top_p=None,
+             num_beams=1,
+             no_repeat_ngram_size=3,
+             eos_token_id=tokenizer.eos_token_id,  # End of sequence token
+             pad_token_id=tokenizer.eos_token_id,  # Pad token
+             max_new_tokens=300,
+            )
+
+        response = outputs[0]['generated_text']
         pred = extract_answer(response, row)
         responses.append(response)
 
