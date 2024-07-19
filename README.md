@@ -2,7 +2,7 @@
 <h3 align="center"> Medical Question Answering Benchmark with Multiple Explanations </h3>
 
 <p align="center">
- :page_facing_up: <a href="https://arxiv.org/abs/2406.06331" target="_blank">Paper</a> • ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) <a href="https://github.com/knowlab/MedExQA" target="_blank">Code</a> • :arrow_double_down: <a href="https://huggingface.co/datasets/bluesky333/MedExQA" target="_blank">Dataset</a>  • :medical_symbol: <a href="https://huggingface.co/bluesky333/medphi2" target="_blank">MedPhi2</a><br>
+ :page_facing_up: <a href="https://arxiv.org/abs/2406.06331" target="_blank">Paper</a> • :arrow_double_down: <a href="https://huggingface.co/datasets/bluesky333/MedExQA" target="_blank">Dataset</a>  • :medical_symbol: <a href="https://huggingface.co/bluesky333/medphi2" target="_blank">MedPhi2</a><br>
 </p>
 
 ## :new: News
