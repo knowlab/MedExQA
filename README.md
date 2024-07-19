@@ -14,7 +14,8 @@
 ## Table of Contents
 - [Benchmark Summary](#benchmark-summary)
 - [Dataset Structure](#dataset-structure)
-- [Dataset Structure](#data-fields)
+- [Dataset Fields](#data-fields)
+- [Dataset Usage](#data-usage)
 - [Citation Information](#citation-information)
 
 ##  Benchmark Summary
@@ -46,6 +47,16 @@ The fields are here explained as follows in the order of columns:
 * Column 2-5 : Choice A, B, C, D respectively  
 * Column 6-7 : Explanation pairs  
 * Column 8   : The right answer choice
+
+##  Data Usage
+<a name="data-usage"></a>
+
+<h3 id="install"> 📝 installation </h3>  
+```shell  
+>> git clone https://github.com/knowlab/MedExQA  
+```
+
+
 
 ## Citation
 <a name="citation-information"></a>
