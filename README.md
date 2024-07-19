@@ -14,6 +14,7 @@
 ## Table of Contents
 - [Benchmark Summary](#benchmark-summary)
 - [Dataset Structure](#dataset-structure)
+- [Dataset Structure](#data-fields)
 - [Citation Information](#citation-information)
 
 ##  Benchmark Summary
@@ -35,6 +36,16 @@ Benchmark has 5 five distinct medical specialties that are underrepresented in c
 | Speech Language Pathology   |   135      |  80.5 |
 | Total   |   965      |  78.7 |
 Explanation Similarity represents the average cosine similarity of the explanation pairs.
+
+##  Data Fields
+<a name="data-fields"></a>
+
+The data files (tsv) are provided without headers.  
+The fields are here explained as follows in the order of columns:  
+* Column 1   : The question for the example  
+* Column 2-5 : Choice A, B, C, D respectively  
+* Column 6-7 : Explanation pairs  
+* Column 8   : The right answer choice
 
 ## Citation
 <a name="citation-information"></a>
