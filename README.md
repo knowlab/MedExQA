@@ -64,6 +64,11 @@ git clone https://github.com/knowlab/MedExQA
 ##  Leaderboard
 <a name="leaderboard"></a>
 
+**Table: MCQ accuracy (%) using logits vs chat generation. 
+The MCQ accuracy using logits is reported (except for GPT models). 
+The performance gain/loss with chat generation approach is marked in parenthesis. 
+"BE": Biomedical Engineering; "CP": Clinical Psychology; "SLP": Speech Language Pathology; 
+"OT": Occupational Therapy; "CLS": Clinical Laboratory Science; "MAvg": Macro Average.**
 | **Model**         | **BE**       | **CP**       | **SLP**       | **OT**       | **CLS**      | **MAvg**     |
 |-------------------|--------------|--------------|---------------|--------------|--------------|--------------|
 | Medinote-7B       | 33.6 (-4.9)  | 34.9 (-8.5)  | 23.1 (6.2)    | 38.1 (-8.5)  | 44.6 (-11.6) | 34.9 (-5.5)  |
@@ -88,11 +93,6 @@ git clone https://github.com/knowlab/MedExQA
 | GPT3.5_1106       | 72.0         | 82.1         | 29.2          | 70.4         | 71.5         | 65.0         |
 | GPT4_1106         | 86.7         | 86.8         | 31.5          | 88.4         | **91.7**     | 77.0         |
 | GPT4_0125         | **90.2**     | **91.5**     | 30.8          | **90.0**     | **91.7**     | **78.8**     |
-**Table: MCQ accuracy (%) using logits vs chat generation. 
-The MCQ accuracy using logits is reported (except for GPT models). 
-The performance gain/loss with chat generation approach is marked in parenthesis. 
-"BE": Biomedical Engineering; "CP": Clinical Psychology; "SLP": Speech Language Pathology; 
-"OT": Occupational Therapy; "CLS": Clinical Laboratory Science; "MAvg": Macro Average.**
 
 ## Citation
 <a name="citation-information"></a>
