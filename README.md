@@ -53,7 +53,6 @@ The fields are here explained as follows in the order of columns:
 <a name="data-usage"></a>
 
 <h3 id="install"> 📝 installation </h3>  
-
 Follow the steps to configure the environment to use the code.
 
 ```shell  
@@ -67,11 +66,11 @@ Download the data
 git clone https://huggingface.co/datasets/bluesky333/MedExQA
 ```
 
-<h3 id="classification"> ⚕️ MedExQA Classification Using Logits </h3>  
+⚕️MedExQA Classification Using Logits
 ```shell  
 python eval/evaluate_MedExQA.py -c bluesky333/medphi2 -d MedExQA -o cls_medphi2 --max-seq-len 2048 --batch-size 1
 ```
-<h3 id="classification"> ⚕️ MedExQA Chat Classification </h3>  
+⚕️MedExQA Chat Classification
 ```shell  
 python eval/evaluate_MedExQA.py -c bluesky333/medphi2 -d MedExQA -o chat_medphi2
 ```
