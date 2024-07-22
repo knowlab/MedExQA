@@ -59,6 +59,7 @@ Follow the steps to configure the environment to use the code.
 git clone https://github.com/knowlab/MedExQA
 cd MedExQA
 conda create -n medexqa python=3.10 -y
+conda activate medexqa
 pip install -r requirements.txt
 ```
 🔻Download the data
