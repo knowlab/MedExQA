@@ -57,9 +57,24 @@ The fields are here explained as follows in the order of columns:
 Follow the steps to configure the environment to use the code.
 
 ```shell  
-git clone https://github.com/knowlab/MedExQA  
+git clone https://github.com/knowlab/MedExQA
+cd MedExQA
+conda create -n medexqa python=3.10 -y
+pip install -r requirements.txt
+```
+Download the data
+```
+git clone https://huggingface.co/datasets/bluesky333/MedExQA
 ```
 
+<h3 id="classification"> ⚕️ MedExQA Classification Using Logits </h3>  
+```shell  
+python eval/evaluate_MedExQA.py -c bluesky333/medphi2 -d MedExQA -o cls_medphi2 --max-seq-len 2048 --batch-size 1
+```
+<h3 id="classification"> ⚕️ MedExQA Chat Classification </h3>  
+```shell  
+python eval/evaluate_MedExQA.py -c bluesky333/medphi2 -d MedExQA -o chat_medphi2
+```
 
 ##  Leaderboard
 <a name="leaderboard"></a>
