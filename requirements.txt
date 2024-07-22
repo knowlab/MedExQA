@@ -1,0 +1,9 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+pandas==1.5.3
+transformers==4.38.2
+accelerate==0.27.2
+numpy==1.26.3
+torch==2.2.0
+torchvision==0.17.0
+torchaudio==2.2.0
+thefuzz==0.22.1
