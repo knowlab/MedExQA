@@ -52,7 +52,7 @@ The fields are here explained as follows in the order of columns:
 ##  Data Usage
 <a name="data-usage"></a>
 
-<h3 id="install"> 📝 installation </h3>  
+📝 installation
 Follow the steps to configure the environment to use the code.
 
 ```shell  
@@ -61,7 +61,7 @@ cd MedExQA
 conda create -n medexqa python=3.10 -y
 pip install -r requirements.txt
 ```
-Download the data
+🔻Download the data
 ```
 git clone https://huggingface.co/datasets/bluesky333/MedExQA
 ```
