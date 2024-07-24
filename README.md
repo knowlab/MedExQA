@@ -69,11 +69,11 @@ git clone https://huggingface.co/datasets/bluesky333/MedExQA
 
 ⚕️MedExQA Classification Using Logits
 ```shell  
-python eval/evaluate_MedExQA.py -c bluesky333/medphi2 -d MedExQA -o cls_medphi2 --max-seq-len 2048 --batch-size 1
+python evaluate_MedExQA.py -c bluesky333/medphi2 -d MedExQA -o cls_medphi2 --max-seq-len 2048 --batch-size 1
 ```
 ⚕️MedExQA Chat Classification
 ```shell  
-python eval/evaluate_MedExQA.py -c bluesky333/medphi2 -d MedExQA -o chat_medphi2
+python evaluate_pipe_MedExQA.py -c bluesky333/medphi2 -d MedExQA -o chat_medphi2
 ```
 
 ##  Leaderboard
